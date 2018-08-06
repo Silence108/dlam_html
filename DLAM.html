@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>机器猫</title>
+<style>
+@keyframes myfirst
+{
+    0% {transform: rotateX(0);}
+    50% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0% {transform: rotateX(0);}
+    50% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    0% {transform: rotateX(0);}
+    50% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0% {transform: rotateX(0);}
+    50% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
+.DLAM {
+    position: relative;
+    left: 36%;
+    top: 180px;
+    width: 400px;
+    height: 500px;
+}
+.head {
+    width: 300px;
+    height: 300px;
+    background: #0daed8;
+    border-radius: 50%;
+    border: #000 solid 3px;
+    position: absolute;
+    overflow: hidden;
+    left: 8px;
+}
+.fece {
+    width: 250px;
+    height: 210px;
+    background: #fff;
+    border-radius: 50%;
+    border: #000 solid 2px;
+    position: absolute;
+    top: 88px;
+    left: 22px;
+}
+.fece .eye {
+    width: 72px;
+    height: 90px;
+    border-radius: 34px;
+    background: #fff;
+    border: #000 solid 2px;
+    position: absolute;
+}
+.fece .eye span {
+    width: 15px;
+    height: 15px;
+    background: #363636;
+    border-radius: 50%;
+    position: absolute;
+    left: 45px;
+    bottom: 16px;
+}
+.fece .eye.left {
+    left: 50px;
+    top: -46px;
+}
+.fece .eye.right {
+    right: 50px;
+    top: -46px;
+}
+.fece .eye.right span {
+    left: 12px;
+    animation:myfirst 1s infinite;
+    -webkit-animation:myfirst 1s infinite;
+}
+.fece .nose {
+    width: 30px;
+    height: 30px;
+    background: #cc3b02;
+    border-radius: 50%;
+    border: #000 solid 2px;
+    position: absolute;
+    left: 108px;
+    top: 35px;
+}
+.fece .line {
+    width: 2px;
+    height: 82px;
+    background: #000;
+    position: absolute;
+    left: 124px;
+    top: 68px;
+    z-index: 6;
+}
+.fece .mouth {
+    width: 174px;
+    height: 94px;
+    border-bottom: #000 solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 60px;
+    left: 38px;
+}
+.fece .mouth .Mask {
+    width: 178px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+}
+.fece .beard {
+    position: absolute;
+    top: 90px;
+    left: 28px;
+    z-index: 6;
+}
+.fece .beard.right {
+    position: absolute;
+    top: 90px;
+    left: 222px;
+    transform: rotateZ(180deg);
+}
+.fece .beard .item {
+    width: 58px;
+    height: 2px;
+    background: #323232;
+    position: absolute;
+}
+.fece .beard .item.beard_t {
+    transform: rotateZ(-160deg);
+    top: -18px;
+}
+.fece .beard .item.beard_b {
+    transform: rotateZ(160deg);
+    top: 18px;
+}
+.scarf {
+    width: 220px;
+    height: 22px;
+    background: #a62400;
+    position: absolute;
+    top: 274px;
+    left: 48px;
+    border-radius: 15px;
+    z-index: 8;
+    border: #000 solid 2px;
+}
+.body {
+    width: 204px;
+    height: 164px;
+    background: #0daed8;
+    position: absolute;
+    top: 286px;
+    left: 55px;
+    border: #000 solid 2px;
+    overflow: hidden;
+}
+.bell {
+    width: 28px;
+    height: 28px;
+    background: #efda00;
+    position: absolute;
+    left: 144px;
+    top: 282px;
+    z-index: 9;
+    border-radius: 50%;
+    border: #000 solid 2px;
+}
+.bell .line {
+    width: 28px;
+    height: 2px;
+    background: #505050;
+    position: absolute;
+    top: 4px;
+}
+.bell .line.line2 {
+    top: 8px;
+}
+.bell .spot {
+    width: 10px;
+    height: 9px;
+    background: #323232;
+    border-radius: 50%;
+    position: absolute;
+    left: 9px;
+    top: 12px;
+}
+.bell .v_line {
+    width: 3px;
+    height: 10px;
+    background: #343434;
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+}
+.body .belly {
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    border-radius: 50%;
+    border: #000 solid 2px;
+    position: absolute;
+    top: -48px;
+    left: 10px;
+    z-index: 1;
+}
+.body .belly .pocket {
+    width: 140px;
+    height: 140px;
+    background: #fff;
+    border: #000 solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+}
+.body .belly .Mask {
+    background: #fff;
+    width: 144px;
+    height: 144px;
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    top: -54px;
+    border-bottom: #000 solid 2px;
+}
+.hu {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    border: #000 solid 2px;
+    top: 440px;
+    left: 148px;
+    border-radius: 50%;
+}
+.hu .Mask {
+    width: 24px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    bottom: -12px;
+    left: -2px;
+}
+.foot {
+    width: 106px;
+    height: 26px;
+    background: #fff;
+    border: #000 solid 2px;
+    position: absolute;
+    top: 452px;
+    left: 46px;
+    border-radius: 43px 26px 26px 26px;
+}
+.foot.right {
+    left: 165px;
+    transform: rotateY(-180deg);
+}
+.arm {
+    width: 98px;
+    height: 52px;
+    background: #0daed8;
+    border: #000 solid 2px;
+    position: absolute;
+    top: 312px;
+    left: 0;
+    transform: rotateZ(-45deg);
+}
+.arm .hand {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: #000 solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    left: -40px;
+    top: -8px;
+}
+.arm .Mask {
+    width: 80px;
+    height: 32px;
+    background: #0daed8;
+    border-left: #000 solid 2px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    left: 21px;
+    top: 61px;
+}
+.arm.right {
+    transform: rotateY(174deg) rotateZ(-44deg);
+    position: absolute;
+    left: 215px;
+}
+</style>
+</head>
+<body>
+<div class="DLAM">
+    <div class="head">
+        <div class="fece">
+            <div class="eye left"><span></span></div>
+            <div class="eye right"><span></span></div>
+            <div class="nose"></div>
+            <div class="line"></div>
+            <div class="mouth">
+                <div class="Mask"></div>
+            </div>
+            <div class="beard left">
+                <div class="beard_t item"></div>
+                <div class="beard_m item"></div>
+                <div class="beard_b item"></div>
+            </div>
+            <div class="beard right">
+                <div class="beard_t item"></div>
+                <div class="beard_m item"></div>
+                <div class="beard_b item"></div>
+            </div>
+        </div>
+    </div>
+    <div class="scarf"></div>
+    <div class="bell">
+        <div class="line"></div>
+        <div class="line line2"></div>
+        <div class="spot"></div>
+        <div class="v_line"></div>
+    </div>
+    <div class="body">
+        <div class="belly">
+            <div class="Mask"></div>
+            <div class="pocket"></div>
+        </div>
+    </div>
+    <div class="arm left">
+        <div class="Mask"></div>
+        <div class="hand"></div>
+    </div>
+    <div class="arm right">
+        <div class="Mask"></div>
+        <div class="hand"></div>
+    </div>
+    <div class="hu">
+        <div class="Mask"></div>
+    </div>
+    <div class="foot left"></div>
+    <div class="foot right"></div>
+</div>
+</body>
+</html>
